@@ -1,0 +1,86 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="polar.com.androidblesdk"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:5:5-68
+11-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:5:22-65
+12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+12-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:6:5-74
+12-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:6:22-71
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:8:5-64
+14-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:8:22-62
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:9:5-70
+15-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:9:22-68
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:10:5-80
+16-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:11:5-80
+17-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:11:22-77
+18    <uses-permission android:name="android.permission.INTERNET" />
+18-->[polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:12:5-67
+18-->[polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:12:22-64
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->[polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:15:5-79
+19-->[polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:15:22-76
+20
+21    <application
+21-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:13:5-33:19
+22        android:allowBackup="true"
+22-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:14:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.1.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:15:9-43
+26        android:label="@string/app_name"
+26-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:16:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:17:9-54
+28        android:supportsRtl="true"
+28-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:18:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:19:9-40
+31        <activity android:name="polar.com.androidblesdk.MainActivity" >
+31-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:9-28:20
+31-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:19-47
+32            android:configChanges="orientation"
+33            android:screenOrientation="portrait">
+34            <intent-filter>
+34-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:23:13-27:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:17-69
+35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:17-77
+37-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="polar.com.androidblesdk.VideoListerActivity" />
+40-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:9-66
+40-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:19-54
+41        <activity
+41-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:30:9-32:61
+42            android:name="polar.com.androidblesdk.vplayerActivity"
+42-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:31:13-44
+43            android:screenOrientation="portrait" />
+43-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:32:13-49
+44    </application>
+45
+46</manifest>
