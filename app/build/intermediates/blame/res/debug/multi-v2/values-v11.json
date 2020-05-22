@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "C:\\Users\\vin96\\Downloads\\heart-sense\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\src\\main\\res\\values-v11\\template-styles.xml",
+                    "source": "C:\\Users\\vin96\\Downloads\\heart-sense\\app\\src\\main\\res\\values-v11\\template-styles.xml",
                     "from": {
                         "startLines": "19",
                         "startColumns": "4",

@@ -71,7 +71,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     public File file;
     public FileOutputStream fstream;
     public OutputStreamWriter myOutWriter;
-    public Boolean sensorConnected=Boolean.TRUE;
+    public Boolean sensorConnected=Boolean.FALSE;
 
 
 
@@ -85,6 +85,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         mSensorLight=mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         appDirPath = getApplicationContext().getFilesDir();
         appDirPath = new File((appDirPath == null ? "" : (appDirPath.getAbsolutePath() + "/")));
+        System.out.println("app dir");
+        System.out.println(appDirPath);
         // Notice PolarBleApi.ALL_FEATURES are enabled
         api = PolarBleApiDefaultImpl.defaultImplementation(this, PolarBleApi.ALL_FEATURES);
         api.setPolarFilter(false);
@@ -362,6 +364,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 val1 = System.currentTimeMillis();
                 Timestamp ts = new Timestamp(val1);
                 Log.d(String.valueOf(ts), "onSensorChanged: ");
+                myOutWriter.append(",");
                 myOutWriter.append(String.valueOf(ts));
                 myOutWriter.append(val);
                 myOutWriter.append("\n");

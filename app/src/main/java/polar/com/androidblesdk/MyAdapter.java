@@ -49,7 +49,6 @@ public class MyAdapter extends RecyclerView.Adapter<VideoHolder> {
             holder.mCardView.setOnClickListener(new View.OnClickListener() {
                                                     @Override
                                                     public void onClick(View view) {
-
                                                         Intent intent = new Intent(context, vplayerActivity.class);
                                                         intent.putExtra("position", holder.getAdapterPosition());
                                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
