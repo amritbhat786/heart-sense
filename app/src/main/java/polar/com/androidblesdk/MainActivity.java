@@ -70,7 +70,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     static final int REQUEST_VIDEO_CAPTURE = 1;
     public File file;
     public FileOutputStream fstream;
-    public OutputStreamWriter myOutWriter;
+    public OutputStreamWriter myOutWriter = null;
     public Boolean sensorConnected=Boolean.TRUE;
 
 
@@ -193,9 +193,9 @@ public class MainActivity extends Activity implements SensorEventListener {
                         long currentTime = System.currentTimeMillis();
                         Timestamp ts = new Timestamp(currentTime);
                         Log.d(TAG,"Trying writing sensor data to file...");
-                        Log.d(String.valueOf(ts), "onSensorChanged: ");
+                        Log.d(String.valueOf(ts), "onSensorChanged: "+String.valueOf(data.hr));
                         myOutWriter.append(String.valueOf(ts));
-                        myOutWriter.append((char) data.hr);
+                        myOutWriter.append(String.valueOf(data.hr));
                         myOutWriter.append("\n");
                         myOutWriter.flush();
                         //  dynamview=(TextView)findViewById(R.id.ttview);
@@ -333,12 +333,6 @@ public class MainActivity extends Activity implements SensorEventListener {
     @Override
     protected void onStart() {
         super.onStart();
-
-//        if(mSensorLight!=null){
-//            Log.d("Hello", "onStart: ");
-//            mSensorManager.registerListener(this,mSensorLight,SensorManager.SENSOR_DELAY_NORMAL);
-//
-//        }
     }
 
     public void openVideoListerActivity(){
@@ -354,29 +348,29 @@ public class MainActivity extends Activity implements SensorEventListener {
         }
     }
 
-    public void writeSensorValToFile(){
-
-        Log.d(val, "onSensorChanged: ");
-        if(myOutWriter!=null) {
-            try {
-                val1 = System.currentTimeMillis();
-                Timestamp ts = new Timestamp(val1);
-                Log.d(String.valueOf(ts), "onSensorChanged: ");
-                myOutWriter.append(String.valueOf(ts));
-                myOutWriter.append(val);
-                myOutWriter.append("\n");
-                //myOutWriter.close();
-                myOutWriter.flush();
-                Log.d(val, "on ");
-                //  dynamview=(TextView)findViewById(R.id.ttview);
-                // dynamview.setText(val);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-                Log.d("exception", "onSensorChanged: ");
-            }
-        }
-    }
+//    public void writeSensorValToFile(){
+//
+//        Log.d(val, "onSensorChanged: ");
+//        if(myOutWriter!=null) {
+//            try {
+//                val1 = System.currentTimeMillis();
+//                Timestamp ts = new Timestamp(val1);
+//                Log.d(String.valueOf(ts), "onSensorChanged: ");
+//                myOutWriter.append(String.valueOf(ts));
+//                myOutWriter.append(val);
+//                myOutWriter.append("\n");
+//                //myOutWriter.close();
+//                myOutWriter.flush();
+//                Log.d(val, "on ");
+//                //  dynamview=(TextView)findViewById(R.id.ttview);
+//                // dynamview.setText(val);
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//                Log.d("exception", "onSensorChanged: ");
+//            }
+//        }
+//    }
 
     String val;
     long val1;
@@ -433,14 +427,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
     @Override
     protected void onStop(){
-        if(myOutWriter!=null) {
-            Log.d(TAG,"CLOSING File output handler!!!!!!!");
-            try {
-                myOutWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        Log.d(TAG,"CLOSING File output handler!!!!!!!");
+        myOutWriter = null;
         super.onStop();
 //        mSensorManager.unregisterListener(this);
     }

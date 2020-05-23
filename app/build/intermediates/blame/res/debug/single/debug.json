@@ -32,12 +32,12 @@
         "source": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_info.png"
     },
     {
-        "merged": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\build\\intermediates\\res\\merged\\debug\\raw_skip.txt.flat",
-        "source": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\src\\main\\res\\raw\\skip.txt"
-    },
-    {
         "merged": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\build\\intermediates\\res\\merged\\debug\\raw_skip.txt.flat",
+        "source": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\src\\main\\res\\raw\\skip.txt"
     },
     {
         "merged": "C:\\Users\\amrit\\AndroidStudioProjects\\androidBleSdkTestApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",

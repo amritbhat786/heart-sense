@@ -56,6 +56,8 @@ public class VideoListerActivity extends Activity {
         }
         else {
             boolean_perm=true;
+            videoFileArrayList = new ArrayList<>();
+            sensorTextFileArrayList = new ArrayList<>();
             getFile(directory);
 
             obj_adapter=new MyAdapter(getApplicationContext(),videoFileArrayList,sensorTextFileArrayList);
@@ -73,6 +75,8 @@ public class VideoListerActivity extends Activity {
             if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
 
                 boolean_perm=true;
+                videoFileArrayList = new ArrayList<>();
+                sensorTextFileArrayList = new ArrayList<>();
                 getFile(directory);
                 obj_adapter=new MyAdapter(getApplicationContext(),videoFileArrayList,sensorTextFileArrayList);
                 myRecyclerView.setAdapter(obj_adapter);
