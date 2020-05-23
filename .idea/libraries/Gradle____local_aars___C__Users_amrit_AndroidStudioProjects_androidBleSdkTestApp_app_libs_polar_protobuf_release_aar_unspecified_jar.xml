@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:C./Users/amrit/AndroidStudioProjects/androidBleSdkTestApp/app/libs/polar-protobuf-release.aar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb37a7d9aaf36e0f57f44e3a9055b71a/polar-protobuf-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb37a7d9aaf36e0f57f44e3a9055b71a/polar-protobuf-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="heart-sense/app" />
-      <module fileurl="file://$PROJECT_DIR$/heart-sense.iml" filepath="$PROJECT_DIR$/heart-sense.iml" group="heart-sense" />
+      <module fileurl="file://$PROJECT_DIR$/androidBleSdkTestApp.iml" filepath="$PROJECT_DIR$/androidBleSdkTestApp.iml" group="androidBleSdkTestApp" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="androidBleSdkTestApp/app" />
     </modules>
   </component>
 </project>
