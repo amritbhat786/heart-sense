@@ -50,10 +50,6 @@ import polar.com.sdk.api.model.PolarSensorSetting;
 public class MainActivity extends Activity implements SensorEventListener {
     private final static String TAG = MainActivity.class.getSimpleName();
 
-    // Light sensor meta
-    private SensorManager mSensorManager;
-    //private Sensor mSensorProximity;
-    private Sensor mSensorLight;
 
     // Polar sensor meta
     PolarBleApi api;
@@ -80,13 +76,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-
-        mSensorLight=mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         appDirPath = getApplicationContext().getFilesDir();
         appDirPath = new File((appDirPath == null ? "" : (appDirPath.getAbsolutePath() + "/")));
-        System.out.println("app dir");
-        System.out.println(appDirPath);
         // Notice PolarBleApi.ALL_FEATURES are enabled
         api = PolarBleApiDefaultImpl.defaultImplementation(this, PolarBleApi.ALL_FEATURES);
         api.setPolarFilter(false);
@@ -350,38 +341,6 @@ public class MainActivity extends Activity implements SensorEventListener {
         Intent intent = new Intent(this,VideoListerActivity.class);
         startActivity(intent);
     }
-
-    public void connectToDevice(String device_ID){
-        try {
-            api.connectToDevice(device_ID);
-        } catch (PolarInvalidArgument polarInvalidArgument) {
-            polarInvalidArgument.printStackTrace();
-        }
-    }
-
-//    public void writeSensorValToFile(){
-//
-//        Log.d(val, "onSensorChanged: ");
-//        if(myOutWriter!=null) {
-//            try {
-//                val1 = System.currentTimeMillis();
-//                Timestamp ts = new Timestamp(val1);
-//                Log.d(String.valueOf(ts), "onSensorChanged: ");
-//                myOutWriter.append(String.valueOf(ts));
-//                myOutWriter.append(val);
-//                myOutWriter.append("\n");
-//                //myOutWriter.close();
-//                myOutWriter.flush();
-//                Log.d(val, "on ");
-//                //  dynamview=(TextView)findViewById(R.id.ttview);
-//                // dynamview.setText(val);
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                Log.d("exception", "onSensorChanged: ");
-//            }
-//        }
-//    }
 
     String val;
     long val1;
