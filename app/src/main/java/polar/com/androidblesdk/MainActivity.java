@@ -70,8 +70,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     static final int REQUEST_VIDEO_CAPTURE = 1;
     public File file;
     public FileOutputStream fstream;
-    public OutputStreamWriter myOutWriter = null;
-    public Boolean sensorConnected=Boolean.TRUE;
+    public OutputStreamWriter myOutWriter;
+    public Boolean sensorConnected=Boolean.FALSE;
 
 
 
@@ -85,6 +85,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         mSensorLight=mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         appDirPath = getApplicationContext().getFilesDir();
         appDirPath = new File((appDirPath == null ? "" : (appDirPath.getAbsolutePath() + "/")));
+        System.out.println("app dir");
+        System.out.println(appDirPath);
         // Notice PolarBleApi.ALL_FEATURES are enabled
         api = PolarBleApiDefaultImpl.defaultImplementation(this, PolarBleApi.ALL_FEATURES);
         api.setPolarFilter(false);
@@ -194,7 +196,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                         Timestamp ts = new Timestamp(currentTime);
                         Log.d(TAG,"Trying writing sensor data to file...");
                         Log.d(String.valueOf(ts), "onSensorChanged: "+String.valueOf(data.hr));
-                        myOutWriter.append(String.valueOf(ts));
+//                        myOutWriter.append(String.valueOf(ts));
                         myOutWriter.append(String.valueOf(data.hr));
                         myOutWriter.append("\n");
                         myOutWriter.flush();
@@ -239,7 +241,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                     }
                 else{
                     Toast.makeText(getApplicationContext(), "Cannot start video recording as " +
-                            "sensor not connected! Connect sensor and try again.", Toast.LENGTH_SHORT).show();
+                            "sensor not connected! Connect sensor and try again.", Toast.LENGTH_LONG).show();
                     }
                 }
         });
@@ -254,7 +256,14 @@ public class MainActivity extends Activity implements SensorEventListener {
         connect.setOnClickListener(v -> {
             try {
                 api.connectToDevice(DEVICE_ID);
+//                int connectionTimeout = 30;
+//                while(sensorConnected)
+                if(sensorConnected == Boolean.TRUE) {
+                    Toast.makeText(getApplicationContext(), "Connection to sensor successful!", Toast.LENGTH_LONG).show();
+                }
             } catch (PolarInvalidArgument polarInvalidArgument) {
+                Toast.makeText(getApplicationContext(), "ERROR: Connection to sensor failed!!" +
+                        " Try connecting again while ensuring bluetooth is switched ON!", Toast.LENGTH_SHORT).show();
                 polarInvalidArgument.printStackTrace();
             }
         });
@@ -264,7 +273,9 @@ public class MainActivity extends Activity implements SensorEventListener {
                 api.disconnectFromDevice(DEVICE_ID);
                 sensorConnected = Boolean.FALSE;
                 this.onStop();
+                Toast.makeText(getApplicationContext(), "Sensor has been disconnected! Video recording will be disabled now.", Toast.LENGTH_LONG).show();
             } catch (PolarInvalidArgument polarInvalidArgument) {
+                Toast.makeText(getApplicationContext(), "ERROR: Sensor could not be disconnected successfully. Please try again!", Toast.LENGTH_LONG).show();
                 polarInvalidArgument.printStackTrace();
             }
         });
@@ -376,54 +387,54 @@ public class MainActivity extends Activity implements SensorEventListener {
     long val1;
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        int sensorType = sensorEvent.sensor.getType();
-
-
-
-        float currentValue=sensorEvent.values[0];
-        switch(sensorType){
-            case Sensor.TYPE_LIGHT:
-            {
-
-                //  mTextSensorLight=(TextView)findViewById(R.id.label_light);
-//                mTextSensorLight.setText(getResources().getString(R.string.label_light,currentValue));
-                //mTextSensorLight.setText(getResources().getString(R.string.label_light,currentValue));
-                //mTextSensorLight.setText("Trial");
-                //  OutputStreamWriter myOutWriter = new OutputStreamWriter(fstream);
-
-                TextView dynamview;
-                val=getResources().getString(R.string.label_light,currentValue);
-                Log.d(val, "onSensorChanged: ");
-                if(myOutWriter!=null) {
-                    try {
-                        val1 = System.currentTimeMillis();
-                        Timestamp ts = new Timestamp(val1);
-                        Log.d(String.valueOf(ts), "onSensorChanged: ");
-                        myOutWriter.append(String.valueOf(ts));
-                        myOutWriter.append(val);
-                        myOutWriter.append("\n");
-                        //myOutWriter.close();
-                        myOutWriter.flush();
-                        Log.d(val, "on ");
-                        //  dynamview=(TextView)findViewById(R.id.ttview);
-                        // dynamview.setText(val);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        Log.d("exception", "onSensorChanged: ");
-                    }
-                }
-
-                //       TextView dynamview;
-                //     dynamview=(TextView)findViewById(R.id.ttview);
-
-                //   dynamview.setText(val);
-
-
-            }
-            break;
-            default:
-        }
+//        int sensorType = sensorEvent.sensor.getType();
+//
+//
+//
+//        float currentValue=sensorEvent.values[0];
+//        switch(sensorType){
+//            case Sensor.TYPE_LIGHT:
+//            {
+//
+//                //  mTextSensorLight=(TextView)findViewById(R.id.label_light);
+////                mTextSensorLight.setText(getResources().getString(R.string.label_light,currentValue));
+//                //mTextSensorLight.setText(getResources().getString(R.string.label_light,currentValue));
+//                //mTextSensorLight.setText("Trial");
+//                //  OutputStreamWriter myOutWriter = new OutputStreamWriter(fstream);
+//
+//                TextView dynamview;
+//                val=getResources().getString(R.string.label_light,currentValue);
+//                Log.d(val, "onSensorChanged: ");
+//                if(myOutWriter!=null) {
+//                    try {
+//                        val1 = System.currentTimeMillis();
+//                        Timestamp ts = new Timestamp(val1);
+//                        Log.d(String.valueOf(ts), "onSensorChanged: ");
+//                        myOutWriter.append(String.valueOf(ts));
+//                        myOutWriter.append(val);
+//                        myOutWriter.append("\n");
+//                        //myOutWriter.close();
+//                        myOutWriter.flush();
+//                        Log.d(val, "on ");
+//                        //  dynamview=(TextView)findViewById(R.id.ttview);
+//                        // dynamview.setText(val);
+//
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                        Log.d("exception", "onSensorChanged: ");
+//                    }
+//                }
+//
+//                //       TextView dynamview;
+//                //     dynamview=(TextView)findViewById(R.id.ttview);
+//
+//                //   dynamview.setText(val);
+//
+//
+//            }
+//            break;
+//            default:
+//        }
     }
     @Override
     protected void onStop(){

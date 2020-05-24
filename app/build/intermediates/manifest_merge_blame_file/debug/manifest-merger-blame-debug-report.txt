@@ -39,7 +39,7 @@
 19-->[polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:15:22-76
 20
 21    <application
-21-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:13:5-33:19
+21-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:13:5-31:19
 22        android:allowBackup="true"
 22-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:14:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -57,30 +57,28 @@
 30        android:theme="@style/AppTheme" >
 30-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:19:9-40
 31        <activity android:name="polar.com.androidblesdk.MainActivity" >
-31-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:9-28:20
+31-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:9-26:20
 31-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:19-47
-32            android:configChanges="orientation"
-33            android:screenOrientation="portrait">
-34            <intent-filter>
-34-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:23:13-27:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:17-69
-35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:17-77
-37-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:27-74
-38            </intent-filter>
-39        </activity>
-40        <activity android:name="polar.com.androidblesdk.VideoListerActivity" />
-40-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:9-66
-40-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:19-54
-41        <activity
-41-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:30:9-32:61
-42            android:name="polar.com.androidblesdk.vplayerActivity"
-42-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:31:13-44
-43            android:screenOrientation="portrait" />
-43-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:32:13-49
-44    </application>
-45
-46</manifest>
+32            <intent-filter>
+32-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:21:13-25:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:22:17-69
+33-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:22:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:17-77
+35-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="polar.com.androidblesdk.VideoListerActivity" />
+38-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:27:9-66
+38-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:27:19-54
+39        <activity
+39-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:28:9-30:63
+40            android:name="polar.com.androidblesdk.vplayerActivity"
+40-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:13-44
+41            android:screenOrientation="fullSensor" />
+41-->C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:30:13-51
+42    </application>
+43
+44</manifest>

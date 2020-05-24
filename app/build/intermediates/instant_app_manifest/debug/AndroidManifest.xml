@@ -30,8 +30,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="polar.com.androidblesdk.MainActivity" >
-            android:configChanges="orientation"
-            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +39,7 @@
         <activity android:name="polar.com.androidblesdk.VideoListerActivity" />
         <activity
             android:name="polar.com.androidblesdk.vplayerActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
     </application>
 
 </manifest>

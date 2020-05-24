@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [polar-ble-sdk.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\fb73ccd00cca43f324123f7e6972f49e\jetified-polar-ble-sdk\AndroidManifest.xml:2:1-17:12
 MERGED from [polar-protobuf-release.aar] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\bb37a7d9aaf36e0f57f44e3a9055b71a\polar-protobuf-release\AndroidManifest.xml:2:1-11:12
 MERGED from [io.reactivex.rxjava3:rxandroid:3.0.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\a6aedf1c7ba4903622509a2d0569c6c2\rxandroid-3.0.0\AndroidManifest.xml:15:1-20:12
@@ -42,20 +42,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\amrit\.gradle\caches
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\9c0d2720907bb8bd5d5976efee735314\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\d00c90699ae27cc1e1ce5e4b3e530617\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\13ac386f95e101744ae5f7d486caaa8c\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -94,7 +94,7 @@ ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\mai
 	android:name
 		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:11:22-77
 application
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:13:5-33:19
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:13:5-31:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\380cbbd0623e9b22e21961fc6ec82b14\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\380cbbd0623e9b22e21961fc6ec82b14\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\amrit\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -116,29 +116,29 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\am
 	android:theme
 		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:19:9-40
 activity#polar.com.androidblesdk.MainActivity
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:9-28:20
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
 		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:20:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:24:27-74
 activity#polar.com.androidblesdk.VideoListerActivity
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:9-66
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:27:9-66
 	android:name
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:19-54
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:27:19-54
 activity#polar.com.androidblesdk.vplayerActivity
-ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:30:9-32:61
+ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:28:9-30:63
 	android:screenOrientation
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:30:13-51
 	android:name
-		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:31:13-44
+		ADDED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml:29:13-44
 uses-sdk
 INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\amrit\AndroidStudioProjects\androidBleSdkTestApp\app\src\main\AndroidManifest.xml

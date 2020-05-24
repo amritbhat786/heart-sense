@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,14 +51,39 @@ public class MyAdapter extends RecyclerView.Adapter<VideoHolder> {
             holder.mCardView.setOnClickListener(new View.OnClickListener() {
                                                     @Override
                                                     public void onClick(View view) {
-
                                                         Intent intent = new Intent(context, vplayerActivity.class);
                                                         intent.putExtra("position", holder.getAdapterPosition());
                                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                                         context.startActivity(intent);
                                                     }
-                                                }
-            );
+                                                });
+            holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    File deleteVideo = videoArrayList.get(position);
+                    File deleteText = sensorTextFileArrayList.get(position);
+                    File parentDirectory = deleteVideo.getParentFile();
+
+                    if (deleteVideo.delete()) {
+                        System.out.println("Deleted the file: " + deleteVideo.getName());
+                    } else {
+                        System.out.println("Failed to delete the file.");
+                    }
+                    if (deleteText.delete()) {
+                        System.out.println("Deleted the file: " + deleteVideo.getName());
+                    } else {
+                        System.out.println("Failed to delete the file.");
+                    }
+                    if (parentDirectory.delete()) {
+                        System.out.println("Directory to be deleted: "+parentDirectory);
+                    } else {
+                        System.out.println("Failed to delete the file.");
+                    }
+                    Intent intent = new Intent(context,VideoListerActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -76,6 +103,7 @@ class VideoHolder extends RecyclerView.ViewHolder{
     TextView txtFileName;
     ImageView imageThumbnail;
     CardView mCardView;
+    Button deleteButton;
 
 
     VideoHolder(View view){
@@ -83,6 +111,6 @@ class VideoHolder extends RecyclerView.ViewHolder{
         txtFileName = view.findViewById(R.id.txt_videoFileName);
         imageThumbnail= view.findViewById(R.id.iv_thmnail);
         mCardView = view.findViewById(R.id.myCardview);
-
+        deleteButton = view.findViewById(R.id.delete_btn);
     }
 }
