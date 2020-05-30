@@ -2,6 +2,7 @@ package polar.com.androidblesdk;
 
 import android.Manifest;
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -10,6 +11,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -68,6 +72,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     public FileOutputStream fstream;
     public OutputStreamWriter myOutWriter;
     public Boolean sensorConnected=Boolean.FALSE;
+    int sensorConnectionTimeout = 30;
+    int REQUEST_ENABLE_BT = 1;
 
 
 
@@ -93,6 +99,16 @@ public class MainActivity extends Activity implements SensorEventListener {
         final Button scan = this.findViewById(R.id.scan_button);
         final Button listVideos = this.findViewById(R.id.listVideos);
 
+
+
+        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null) {
+            Toast.makeText(getApplicationContext(), "Bluetooth isn't supported by your device.. :(", Toast.LENGTH_LONG).show();
+        }
+        if (!bluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        }
 
         api.setApiLogger(s -> Log.d(TAG,s));
 
@@ -247,10 +263,27 @@ public class MainActivity extends Activity implements SensorEventListener {
         connect.setOnClickListener(v -> {
             try {
                 api.connectToDevice(DEVICE_ID);
-//                int connectionTimeout = 30;
-//                while(sensorConnected)
+                int sensorCounter = 0;
+                while(sensorConnected == Boolean.FALSE && sensorCounter <= sensorConnectionTimeout){
+                    Toast.makeText(getApplicationContext(), "Connecting to sensor...", Toast.LENGTH_SHORT).show();
+                    new CountDownTimer(30000, 1000) {
+                        public void onFinish() {
+                            // When timer is finished
+                            // Execute your code here
+                        }
+
+                        public void onTick(long millisUntilFinished) {
+                            // millisUntilFinished    The amount of time until finished.
+                        }
+                    }.start();
+                    sensorCounter+=1;
+                }
                 if(sensorConnected == Boolean.TRUE) {
                     Toast.makeText(getApplicationContext(), "Connection to sensor successful!", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Couldn't connect to sensor! " +
+                            "Please bring the sensor in close vicinity of your mobile device and try again.", Toast.LENGTH_LONG).show();
                 }
             } catch (PolarInvalidArgument polarInvalidArgument) {
                 Toast.makeText(getApplicationContext(), "ERROR: Connection to sensor failed!!" +
